@@ -1,0 +1,286 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7f6;
+    color: #222;
+}
+
+.navbar {
+    background: #123c35;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #8df0c3;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8df0c3;
+}
+
+.hero {
+    background: linear-gradient(120deg, #14594b, #23866d);
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #a4f3cb;
+    color: #123c35;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+section {
+    margin-bottom: 55px;
+}
+
+section h2 {
+    color: #14594b;
+    margin-bottom: 20px;
+}
+
+.search-area {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-area input,
+.search-area select {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.search-area input {
+    flex: 1;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px #00000012;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background: #e5e5e5;
+}
+
+.product-info {
+    padding: 16px;
+}
+
+.product-info h3 {
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #666;
+    margin: 7px 0;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.price {
+    color: #168052 !important;
+    font-size: 21px !important;
+    font-weight: bold;
+}
+
+.product-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+button {
+    border: none;
+    padding: 10px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-btn {
+    background: #167a5b;
+    color: white;
+    flex: 1;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.favorite-btn {
+    background: #ffe6eb;
+    color: #d63355;
+}
+
+.sell-section,
+.cart-section {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+.sell-section form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.sell-section input,
+.sell-section select,
+.sell-section textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.sell-section textarea {
+    grid-column: 1 / -1;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.sell-section button {
+    background: #167a5b;
+    color: white;
+    grid-column: 1 / -1;
+    padding: 14px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item button {
+    background: #e74c3c;
+    color: white;
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.cart-total h3 {
+    margin-bottom: 15px;
+}
+
+#checkout-btn {
+    background: #167a5b;
+    color: white;
+    padding: 13px 25px;
+}
+
+.empty-message {
+    color: #777;
+    padding: 20px 0;
+}
+
+footer {
+    background: #123c35;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .search-area {
+        flex-direction: column;
+    }
+
+    .sell-section form {
+        grid-template-columns: 1fr;
+    }
+
+    .sell-section textarea,
+    .sell-section button {
+        grid-column: auto;
+    }
+}
